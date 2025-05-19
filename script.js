@@ -61,6 +61,8 @@ const x_data = () => {
 			try {
 				const response = await axios.post(`${this.ipAddress}/context`, {
 					app_connect: true,
+					port: this.port,
+					baudrate: this.baudrate
 				});
 				toastr.success("GCS connected successfully!", "Success");
 			} catch (error) {
